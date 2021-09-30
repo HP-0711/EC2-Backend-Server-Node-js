@@ -37,8 +37,7 @@ var functions = {
                     if(isMatch && !err){
                         var token = jwt.encode(user, config.secret)
                         res.json({success:true, token: token})
-                        return res.status(200).send({success: true, msg: token});
-                    }
+                      }
                     else{
                         return res.status(403).send({success: false, msg:'Authentication failed wrong password'})
                     }
